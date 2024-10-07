@@ -18,9 +18,9 @@ images:
     productIcon:         "logo.svg"
     productWelcome:      "welcome.png"
 
-slideshow:               ""
+slideshow:               "show.qml"
 
 style:
-   sidebarBackground:    "#2D2D2D"
-   sidebarText:          "#EEEEEE"
-   sidebarTextSelect:    "#4d7079"
+   sidebarBackground:    "#EEEEEE"
+   sidebarText:          "#000000"
+   sidebarTextSelect:    "#E40046"
