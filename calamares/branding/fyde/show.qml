@@ -30,9 +30,48 @@ Presentation
 
     Timer {
         id: advanceTimer
-        interval: 20000
+        interval: 15000
         running: presentation.activatedInCalamares
         repeat: true
         onTriggered: nextSlide()
+    }
+
+    Slide {
+        anchors.fill: parent
+        Rectangle {
+            anchors.fill: parent
+            border.width: 0
+            color: "#222020"
+            Image {
+                id: slide_1
+                source: "images/slide_1.png"
+                fillMode: Image.PreserveAspectFit
+                anchors.fill: parent
+            }
+        }
+    }
+
+    Slide {
+        anchors.fill: parent
+        Rectangle {
+            anchors.fill: parent
+            border.width: 0
+            color: "#222020"
+            Image {
+                id: slide_2
+                source: "images/slide_2.png"
+                fillMode: Image.PreserveAspectFit
+                anchors.fill: parent
+            }
+        }
+    }
+
+    function onActivate() {
+        console.log("QML Component (slideshow) activated");
+        presentation.currentSlide = 0;
+    }
+
+    function onLeave() {
+        console.log("QML Component (slideshow) deactivated");
     }
 }
