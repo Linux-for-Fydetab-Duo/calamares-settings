@@ -25,7 +25,7 @@ Description=Remove Calamares
 
 [Service]
 Type=oneshot
-ExecStartPre=sudo pacman -Rncsu --noconfirm calamares
+ExecStartPre=sudo pacman -Rncsu --noconfirm calamares calamares-settings-fydetab
 ExecStart=systemctl disable remove-calamares.service
 
 [Install]
