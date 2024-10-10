@@ -38,9 +38,9 @@ subprocess.run(['systemctl', 'daemon-reload'])
 subprocess.run(['systemctl', 'enable', 'remove-live-user.service'])
 subprocess.run(['systemctl', 'enable', 'remove-calamares.service'])
 try:
-    #/etc/sudoers.d/g_wheel_nopasswd
+    #/etc/sudoers.d/g_wheel
     #/etc/polkit-1/rules.d/49-nopasswd_global.rules
-    os.remove('/etc/sudoers.d/g_wheel_nopasswd')
+    os.remove('/etc/sudoers.d/g_wheel')
     os.remove('/etc/polkit-1/rules.d/49-nopasswd_global.rules')
 except OSError as e:
     print(e)
